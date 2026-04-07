@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gerador de Charadas</title>
+    <style>
+        /* Animação de tremer para erro */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        .animate-shake { animation: shake 0.2s ease-in-out 0; animation-iteration-count: 2; }
+    </style>
+</head>
+<body id="body" class="bg-lime-100 flex flex-col items-center justify-center min-h-screen p-4 transition-colors duration-500">
+
+    <div class="absolute top-5 right-5 bg-white p-3 rounded-xl shadow-md border-2 border-blue-500">
+        <span class="font-bold text-blue-600">Pontos: <span id="pontos">0</span></span>
+    </div>
+
+    <h1 class="text-3xl font-bold mb-8">Gerador de Charadas</h1>
+
+    <div id="container-card" class="group w-full max-w-sm [perspective:1000px] h-64 mb-6">
+        <div id="card-inner" class="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] shadow-2xl rounded-2xl">
+            
+            <div class="absolute inset-0 [backface-visibility:hidden] bg-white rounded-2xl flex flex-col items-center justify-center p-6 text-center border-2 border-blue-500">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2">Pergunta</span>
+                <p id="pergunta" class="text-xl font-medium text-gray-800 italic">Carregando charada...</p>
+                <button id="btn-pular" class="mt-4 text-gray-400 hover:text-blue-500 text-xs font-light underline">Pular charada</button>
+            </div>
+
+            <div class="absolute inset-0 [backface-visibility:hidden] bg-blue-600 rounded-2xl flex flex-col items-center justify-center p-6 text-center text-white [transform:rotateY(180deg)]">
+                <span class="text-blue-200 font-bold uppercase tracking-widest text-xs mb-2">Resposta</span>
+                <p id="resposta" class="text-2xl font-bold"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full max-w-sm flex flex-col gap-3">
+        <input type="text" id="input-resposta" placeholder="Digite sua resposta aqui..." class="w-full p-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 outline-none shadow-sm text-center font-medium">
+        
+        <button id="btn-verificar" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all active:scale-95 shadow-lg">
+            Verificar Resposta ✅
+        </button>
+    </div>
+
+    <button id="btn-nova" class="mt-8 text-blue-600 font-semibold hover:underline">
+        Próxima Charada 🎲
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
