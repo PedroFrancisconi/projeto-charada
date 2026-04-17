@@ -24,3 +24,5 @@ Estilização: Tailwind CSS para design responsivo e componentes modernos.
 Backend: API Node.js hospedada na Vercel, conectada ao Google Firebase (Firestore).
 
 Animações: Transições CSS suaves para cores e transformações 3D no card.
+
+https://projeto-charada-pi.vercel.app/
