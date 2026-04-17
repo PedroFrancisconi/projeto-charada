@@ -1,4 +1,7 @@
 🧩 Gerador de Charadas
+
+readme
+
 Um web app interativo que desafia o usuário com charadas aleatórias extraídas de um banco de dados via API. O projeto foca em uma experiência de usuário (UX) fluida, com feedbacks visuais instantâneos e um sistema de pontuação dinâmico.
 
 ✨ Funcionalidades
